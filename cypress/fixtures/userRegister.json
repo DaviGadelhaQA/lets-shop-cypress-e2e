@@ -1,0 +1,9 @@
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "userRole": "customer",
+  "occupation": "Student",
+  "gender": "Male",
+  "userMobile": "1234124187",
+  "required": true
+}

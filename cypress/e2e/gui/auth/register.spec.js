@@ -19,10 +19,13 @@ describe('Register Cases', () => {
 
             cy.get('#userPassword').type(Cypress.env('user_password'), { log: false });
             cy.get('#confirmPassword').type(Cypress.env('user_password'), { log: false });
-            
+
             cy.get('input[type="checkbox"]').click();
             cy.get('#login').click();
-            cy.get('h1.headcolor').should('be.visible').and('contain', 'Account Created Successfully');
+
+            cy.get('h1.headcolor')
+                .should('be.visible')
+                .and('contain', 'Account Created Successfully');
         });
     });
 });
