@@ -5,7 +5,8 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://rahulshettyacademy.com/client/#/auth',
-    specPattern: 'cypress/e2e/**/*.spec.js'
+    baseUrl: 'https://rahulshettyacademy.com',
+    specPattern: 'cypress/e2e/**/*.spec.js',
+    experimentalSessionAndOrigin: true,
   },
 });
