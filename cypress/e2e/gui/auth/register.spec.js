@@ -1,12 +1,11 @@
 describe('Register Cases', () => {
     beforeEach(() => {
-        cy.visit('/register');
+        cy.visit('/client/#/auth/register');
     });
 
     context('Positive Scenario', () => {
         it('Register an user sucessfully', () => {
             const email = `qa_${Date.now()}@test.com`;
-            Cypress.env('user_email', email);
 
             cy.get('#firstName').type('Super');
             cy.get('#lastName').type('QA_BR');
