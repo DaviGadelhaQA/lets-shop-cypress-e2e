@@ -17,7 +17,7 @@ Cypress.Commands.add('login', (
             });
         },
         {
-            validade: () => {
+            validate: () => {
                 cy.window().then(win => {
                     expect(win.localStorage.getItem('token')).to.exist;
                 })
