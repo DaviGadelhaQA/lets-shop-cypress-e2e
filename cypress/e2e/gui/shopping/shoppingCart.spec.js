@@ -1,8 +1,8 @@
-describe('Cart Case', () => {
+describe('Shopping cart Case', () => {
     beforeEach(() => {
-        cy.login();
-        cy.addProductToCart('6964af52c941646b7a919472')
-        cy.visit('/client/#/dashboard/cart');
+        cy.api_login();
+        cy.api_addProductToCart('6964af52c941646b7a919472');
+        cy.visit('/client/#/dashboard/dash');
     });
 
     context('Positive Scenarios', () => {
