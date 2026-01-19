@@ -1,6 +1,6 @@
 describe('Dashboard Case', () => {
     beforeEach(() => {
-        cy.login();
+        cy.api_login();
         cy.visit('/client/#/dashboard/dash');
     });
 
