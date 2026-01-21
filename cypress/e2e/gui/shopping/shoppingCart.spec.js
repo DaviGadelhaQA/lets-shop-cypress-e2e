@@ -1,8 +1,10 @@
 describe('Shopping cart Case', () => {
     beforeEach(() => {
-        cy.api_login();
-        cy.api_addProductToCart('6964af52c941646b7a919472');
-        cy.visit('/client/#/dashboard/dash');
+        cy.api_login().then(() => {
+            cy.api_clearCart();
+            cy.api_addProductToCart('6964af52c941646b7a919472');
+            cy.visit('/client/#/dashboard/cart');
+        });
     });
 
     context('Positive Scenarios', () => {
